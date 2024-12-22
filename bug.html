@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    //Incorrect way to select element with special characters
+    let element = document.querySelector("#myDiv");
+    if (element) {
+      element.innerHTML = "Text changed";
+    } else {
+      console.error("Element not found");
+    }
+
+    //Correct way to select element with special characters (if any) 
+    // let element = document.getElementById("myDiv");
+  </script>
+</body>
+</html>
