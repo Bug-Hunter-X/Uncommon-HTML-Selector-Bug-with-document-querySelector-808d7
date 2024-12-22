@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    //Correct way to select element with special characters (if any) 
+    let element = document.getElementById("myDiv");
+    if (element) {
+      element.innerHTML = "Text changed";
+    } else {
+      console.error("Element not found");
+    }
+  </script>
+</body>
+</html>
